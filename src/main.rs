@@ -22,13 +22,13 @@ fn main() {
             short.push(ch);
 
             if let Some(ch) = chs.peek() {
-                if !ch.is_ascii_punctuation() || *ch == '\n' || *ch == '\t' {
+                if !(ch.is_ascii_punctuation() || *ch == '\n' || *ch == '\t') {
                     short.push(*ch);
                 }
             }
         } else if ch == ' ' {
             if let Some(ch) = chs.peek() {
-                if !ch.is_ascii_punctuation() || *ch == '\n' || *ch == '\t' {
+                if !(ch.is_ascii_punctuation() || *ch == '\n' || *ch == '\t') {
                     short.push(*ch);
                 }
             }
